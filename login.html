@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script>
+	function checkfunction(){
+		var x=document.forms["login"]["first"].value;
+		var letters="[a-zA-Z]";
+		if(x.match(letters))
+		{
+			return true;
+		}
+		else{
+			alert("Enter UserName again");
+		}
+
+	}
+	</script>
+</head>
+<body>
+	<div class="box">
+		<img src="icon.jpg" class="icon">
+		<h2>Login</h2>
+		<form name="login">
+			<div class="inputbox">
+				<input type="text" name="first" required="">
+				<label>Username</label>
+			</div>
+			<div class="inputbox">
+				<input type="password" name="pass" required="">
+				<label>Password</label>
+			</div>
+			<button onclick="checkfunction()" class="box1"> Login </button>
+		</form>
+	</div>
+</body>
+</html>
